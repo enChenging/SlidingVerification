@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+>
+
+    <EditText
+        android:id="@+id/et_input"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="20dp"
+        android:layout_marginRight="20dp"
+        android:hint="请输入数字"
+        android:paddingLeft="5dp"
+        android:inputType="number"
+        android:background="@drawable/bg_edit_stoke"
+        />
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_below="@id/et_input"
+        android:layout_margin="20dp"
+        android:text="请按住滑块，拖动到最右边"
+        android:background="#E7EAE9"
+        android:gravity="center"
+        />
+
+    <com.release.slidingverification.SlidingVerification
+        android:id="@+id/sb_progress"
+        android:layout_below="@id/et_input"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:paddingStart="0dp"
+        android:paddingEnd="0dp"
+        android:layout_margin="20dp"
+        android:max="100"
+        android:maxHeight="45dp"
+        android:minHeight="45dp"
+        android:progress="0"
+        android:progressDrawable="@drawable/bg_seekbar"
+        android:thumb="@mipmap/seekbar_thumb"
+        android:thumbOffset="0dp"
+        />
+
+    <TextView
+        android:id="@+id/tv_top"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_below="@id/et_input"
+        android:layout_margin="20dp"
+        android:text="完成验证"
+        android:textColor="@android:color/white"
+        android:gravity="center"
+        android:visibility="gone"
+        />
+
+    <Button
+        android:id="@+id/btn_reset"
+        android:layout_below="@+id/sb_progress"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:text="重制"
+        android:textColor="@android:color/white"
+        android:background="@color/blue"
+        />
+
+</RelativeLayout>
